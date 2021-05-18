@@ -12,18 +12,18 @@ namespace PerfekteKlasseVærelseRestService.Manager
 
         private static List<Temp> _TempList = new List<Temp>()
         {
-            new Temp("42",_nextId++)
+            new Temp(42,_nextId++)
         };
 
 
         public List<Temp> GetAll()
         {
             return _TempList;
-        }
+        } 
 
-        public Temp GetById(int id)
+        public Temp GetById(int ID)
         {
-            return _TempList.Find(Temps => Temps.id == id);
+            return _TempList.Find(Temps => Temps.id == ID);
         }
 
         public void Delete(int id)

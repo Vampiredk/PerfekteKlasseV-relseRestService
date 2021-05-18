@@ -12,38 +12,39 @@ namespace PerfekteKlasseVærelseRestService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TempController : ControllerBase
+    public class MeasurementController : ControllerBase
     {
-        private TempManager _manager = new TempManager();
-        // GET: api/<TestController>
+
+        private MeasManager _manager = new MeasManager();
+        // GET: api/<MeasurementController>
         [HttpGet]
-        public IEnumerable<Temp> Get()
+        public IEnumerable<Measurement> Get()
         {
             return _manager.GetAll();
         }
 
-        // GET api/<TestController>/5
+        // GET api/<MeasurementController>/5
         [HttpGet("{id}")]
-        public Temp Get(int id)
+        public Measurement Get(int id)
         {
             return _manager.GetById(id);
         }
 
-        // POST api/<TestController>
+        // POST api/<MeasurementController>
         [HttpPost]
-        public void Post([FromBody] Temp value)
+        public void Post([FromBody] Measurement value)
         {
             _manager.Add(value);
         }
 
-        // PUT api/<TestController>/5
+        // PUT api/<MeasurementController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Temp value)
+        public void Put(int id, [FromBody] Measurement value)
         {
             _manager.Update(id, value);
         }
 
-        // DELETE api/<TestController>/5
+        // DELETE api/<MeasurementController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

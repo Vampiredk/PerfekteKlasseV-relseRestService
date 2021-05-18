@@ -14,14 +14,14 @@ namespace PerfekteKlasseVærelseRestService.Models
             set { _id = value; }
         }
 
-        private string _temperatur;
-        public string temperatur
+        private int _temperatur;
+        public int temperatur
         {
             get { return _temperatur; }
             set { _temperatur = value; }
         }
 
-        public Temp (string Temp, int Id)
+        public Temp (int Temp, int Id)
         {
             _temperatur = Temp;
             id = Id;
