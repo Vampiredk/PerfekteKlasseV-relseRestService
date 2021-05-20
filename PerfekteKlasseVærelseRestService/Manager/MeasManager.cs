@@ -12,7 +12,7 @@ namespace PerfekteKlasseVærelseRestService.Manager
 
         private static List<Measurement> _MeasureList = new List<Measurement>()
         {
-            new Measurement(42, 100, 75, _nextId++)
+            new Measurement(42, 100, 75, 700, _nextId++)
         };
 
 
@@ -47,6 +47,7 @@ namespace PerfekteKlasseVærelseRestService.Manager
             item.Temp = value.Temp;
             item.Humi = value.Humi;
             item.Stoej = value.Stoej;
+            item.CO2 = value.CO2;
             return item;
         }
     }
